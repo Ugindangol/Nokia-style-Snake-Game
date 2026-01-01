@@ -161,12 +161,6 @@ self.base_speed = 8      # Normal speed (FPS)
 self.boost_speed = 15    # Boost speed (FPS)
 ```
 
-### Modify Colors
-In `snake_game.py`, change color constants:
-```python
-self.NOKIA_GREEN = (155, 188, 15)  # Snake body color
-self.LIGHT_GREEN = (204, 255, 51)  # Snake head color
-```
 
 ## Development
 
@@ -181,26 +175,7 @@ self.LIGHT_GREEN = (204, 255, 51)  # Snake head color
 2. Add new features to the `SnakeGame` class
 3. Update the drawing methods for visual changes
 
-## License
-
-This project is open source and available under the MIT License.
-
-## Author
-
-**Created by Tuba Khan** :)
-
-- GitHub: [@tubakhxn](https://github.com/tubakhxn)
-- A passionate developer creating innovative gaming experiences with AI and computer vision
-
-## Credits
-
-- **MediaPipe** by Google for hand tracking
-- **OpenCV** for computer vision capabilities  
-- **Pygame** for game development framework
-- Inspired by the classic **Nokia Snake** game
-- **Developed by Tuba Khan** - bringing classic games into the modern age with gesture control
-
----
 
 
-**Enjoy playing Nokia Snake with hand gestures! 🐍👋**
+
+
