@@ -3,9 +3,7 @@
 [![Python](https://img.shields.io/badge/Python-3.7+-blue.svg)](https://python.org)
 [![OpenCV](https://img.shields.io/badge/OpenCV-4.8+-green.svg)](https://opencv.org)
 [![MediaPipe](https://img.shields.io/badge/MediaPipe-0.10+-orange.svg)](https://mediapipe.dev)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**Created by Tuba Khan**
 
 A classic Nokia Snake game controlled by hand gestures via webcam using MediaPipe and OpenCV. Experience the nostalgia of Nokia Snake with modern AI-powered gesture recognition!
 
@@ -82,99 +80,17 @@ python main.py
 - Speed increases when pinch gesture is detected
 - Snake grows by one segment when eating fruit
 
-### Scoring
-- **+10 points** per fruit eaten
-- Score displayed in top-left corner
-- Final score shown on game over screen
-
 ### Game Over Conditions
 - Snake hits the wall boundaries
 - Snake collides with its own body
 - Show UP gesture to restart
 
-## File Structure
-
-```
-snake_game/
-├── main.py                 # Main game entry point
-├── snake_game.py          # Nokia Snake game implementation
-├── gesture_controller.py  # Hand gesture recognition
-├── setup.py              # Automatic dependency installer
-├── requirements.txt      # Python package dependencies
-└── README.md            # This file
-```
-
-## Technical Details
-
-### Game Engine
-- **Pygame** for game graphics and window management
-- **Grid-based movement** (20x20 pixel grid cells)
-- **60 FPS** display refresh rate
-- **Variable game speed** (8-15 FPS based on difficulty)
-
-### Computer Vision
-- **MediaPipe Hands** for hand landmark detection
-- **MediaPipe Face Detection** for face tracking
-- **OpenCV** for video capture and processing
-- **Real-time gesture analysis** with movement thresholds
-
-### Architecture
-- **Threaded design** - game and gesture detection run in parallel
-- **Modular code** - separate classes for game logic and gesture control
-- **Event-driven** - gestures trigger game state changes
-
-## Troubleshooting
 
 ### Camera Issues
 ```
 Error: Could not open webcam
 ```
 - Ensure webcam is connected and not used by other applications
-- Try changing camera index in `cv2.VideoCapture(0)` to `1` or `2`
-- Check camera permissions in your OS settings
-
-### Package Installation Issues
-```
-Failed to install package
-```
-- Update pip: `python -m pip install --upgrade pip`
-- Install packages individually: `pip install opencv-python`
-- Use virtual environment to avoid conflicts
-
-### Performance Issues
-- **Low FPS**: Close other applications using the camera
-- **Gesture lag**: Ensure good lighting and clear hand visibility
-- **Game stuttering**: Lower the game resolution in `snake_game.py`
-
-## Customization
-
-### Adjust Gesture Sensitivity
-In `gesture_controller.py`, modify:
-```python
-self.gesture_threshold = 0.05  # Lower = more sensitive
-```
-
-### Change Game Speed
-In `snake_game.py`, modify:
-```python
-self.base_speed = 8      # Normal speed (FPS)
-self.boost_speed = 15    # Boost speed (FPS)
-```
-
-
-## Development
-
-### Adding New Gestures
-1. Extend `detect_gestures()` in `gesture_controller.py`
-2. Add gesture recognition logic using MediaPipe landmarks
-3. Return new gesture type in the function
-4. Handle new gesture in `main.py` game loop
-
-### Modifying Game Mechanics
-1. Edit game logic in `snake_game.py`
-2. Add new features to the `SnakeGame` class
-3. Update the drawing methods for visual changes
-
 
 
 
